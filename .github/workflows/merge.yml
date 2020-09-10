@@ -68,5 +68,5 @@ jobs:
               owner: context.repo.owner,
               repo: context.repo.repo,
               tag_name: `v${process.env.version}`,
-              body: `${changelog}\n\n###Packages:\n${packageDescription}`
+              body: `${changelog}\n\n### Packages:\n${packageDescription}`
             });
