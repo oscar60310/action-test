@@ -62,7 +62,7 @@ jobs:
             const fs = require('fs');
             const changelog = fs.readFileSync('release-note', 'utf-8');
             const packages = JSON.parse(fs.readFileSync('test-pkgs.json', 'utf-8'));
-            const packageDescription = Object.keys(packages).map(name => `${name} = ${package[name]}`).join('\n');
+            const packageDescription = Object.keys(packages).map(name => `${name} = ${packages[name]}`).join('\n');
 
             await github.repos.createRelease({
               owner: context.repo.owner,
