@@ -60,7 +60,7 @@ jobs:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           script: |
             const fs = require('fs');
-            const changelog = fs.readFileSync('release-note')
+            const changelog = fs.readFileSync('release-note', 'utf-8')
             await github.repos.createRelease({
               owner: context.repo.owner,
               repo: context.repo.repo,
