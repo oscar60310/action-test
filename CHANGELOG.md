@@ -1,7 +1,14 @@
+## <small>1.0.14 (2020-09-10)</small>
+
+* fix npm token ([8e7ea31](https://github.com/oscar60310/action-test/commit/8e7ea31))
+
+
+
 ## <small>1.0.13 (2020-09-10)</small>
 
 * auto publish ([3e5c799](https://github.com/oscar60310/action-test/commit/3e5c799))
 * fix release template ([b057f28](https://github.com/oscar60310/action-test/commit/b057f28))
+* Release 1.0.13 ([c2e0483](https://github.com/oscar60310/action-test/commit/c2e0483))
 
 
 
