@@ -42,7 +42,7 @@ jobs:
       - name: generate-changelog-msg
         if: steps.check.outputs.changed == 'true'
         id: changelog
-        run: echo "::set-output name=message::$(yarn run -s conventional-changelog)"
+        run: echo "::set-output name=message::'$(yarn run -s conventional-changelog)'"
       - name: commit-changelog
         if: steps.check.outputs.changed == 'true'
         uses: EndBug/add-and-commit@v4
@@ -65,5 +65,5 @@ jobs:
               owner: context.repo.owner,
               repo: context.repo.repo,
               tag_name: `v${process.env.version}`,
-              body: `${process.env.message} qaq`
+              body: `${process.env.message}\nqaq`
             });
