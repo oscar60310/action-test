@@ -1,0 +1,69 @@
+name: "Version detection"
+on:
+  - pull_request
+
+jobs:
+  triage:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out Git repository
+        uses: actions/checkout@v2
+      - name: Set up Node.js
+        uses: actions/setup-node@v1
+        with:
+          node-version: 10
+          registry-url: "https://registry.npmjs.org"
+      - name: Version check
+        id: check
+        uses: EndBug/version-check@v1.5.0
+        with:
+          diff-search: true
+          token: ${{ secrets.GITHUB_TOKEN }}
+      - name: Labeling
+        uses: actions/github-script@v3
+        env:
+          change: ${{ steps.check.outputs.changed }}
+          type: ${{ steps.check.outputs.type }}
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            console.log(`Change: ${process.env.change}`);
+            console.log(`Change type: ${process.env.type}`)
+            const allLabels = ['Release: patch', 'Release: minor', 'Release: major']
+
+            const existedLabels = (await github.issues.listLabelsOnIssue({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+            })).data;
+
+            let labelIndex = 3;
+            if (process.env.change === 'true') {
+              switch(process.env.type) {
+                case 'patch': labelIndex = 0; break;
+                case 'minor': labelIndex = 1; break;
+                case 'major': labelIndex = 2; break;
+              }
+            }
+
+            // delete other label
+            const deleteReleaseTableIfNotTargeted = async (label, index) => {
+              if(index === labelIndex || existedLabels.findIndex(existedLabel => existedLabel.name === label) === -1) return;
+              await github.issues.removeLabel({
+                issue_number: context.issue.number,
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                name: label
+              })
+            }
+            await Promise.all(allLabels.map(deleteReleaseTableIfNotTargeted));
+
+            // add label
+            if(allLabels[labelIndex]) {
+              await github.issues.addLabels({
+                issue_number: context.issue.number,
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                labels: [allLabels[labelIndex]]
+              })
+            }
