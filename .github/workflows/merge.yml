@@ -36,9 +36,13 @@ jobs:
       - name: Install Node.js dependencies
         if: steps.cache.outputs.cache-hit != 'true'
         run: yarn install
-      - name: generate-release-note
+      - name: generate-changelog
         if: steps.check.outputs.changed == 'true'
         run: yarn changelog
+      - name: generate-changelog-msg
+        if: steps.check.outputs.changed == 'true'
+        id: changelog
+        run: echo "::set-output name=message::$(yarn run -s conventional-changelog)"
       - name: commit-changelog
         if: steps.check.outputs.changed == 'true'
         uses: EndBug/add-and-commit@v4
@@ -48,3 +52,18 @@ jobs:
           tag: "v${{ steps.check.outputs.version }}"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: write-release-note
+        if: steps.check.outputs.changed == 'true'
+        uses: actions/github-script@v3
+        env:
+          version: ${{ steps.check.outputs.version }}
+          message: ${{ steps.changelog.outputs.message }}
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            await github.repos.createRelease({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              tag_name `v${process.env.version}`,
+              body: `${process.env.message} qaq`
+            });
