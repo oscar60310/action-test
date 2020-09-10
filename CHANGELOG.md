@@ -1,6 +1,14 @@
+## 1.1.0 (2020-09-10)
+
+* bump to 1.1.0 ([2b7fa34](https://github.com/oscar60310/action-test/commit/2b7fa34))
+* change xxxx ([1545017](https://github.com/oscar60310/action-test/commit/1545017))
+
+
+
 ## <small>1.0.15 (2020-09-10)</small>
 
 * nothing change ([f44cff9](https://github.com/oscar60310/action-test/commit/f44cff9))
+* Release 1.0.15 ([42d7182](https://github.com/oscar60310/action-test/commit/42d7182))
 
 
 
