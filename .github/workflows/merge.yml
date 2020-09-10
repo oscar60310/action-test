@@ -41,7 +41,7 @@ jobs:
         run: yarn changelog
       - name: generate-changelog-msg
         if: steps.check.outputs.changed == 'true'
-        run: echo $(yarn run -s conventional-changelog) > release-note
+        run: yarn run -s conventional-changelog > release-note
       - name: commit-changelog
         if: steps.check.outputs.changed == 'true'
         uses: EndBug/add-and-commit@v4
