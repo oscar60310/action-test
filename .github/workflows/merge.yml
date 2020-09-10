@@ -64,6 +64,6 @@ jobs:
             await github.repos.createRelease({
               owner: context.repo.owner,
               repo: context.repo.repo,
-              tag_name `v${process.env.version}`,
+              tag_name: `v${process.env.version}`,
               body: `${process.env.message} qaq`
             });
