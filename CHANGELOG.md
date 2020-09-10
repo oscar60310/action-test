@@ -1,6 +1,14 @@
+## <small>1.0.13 (2020-09-10)</small>
+
+* auto publish ([3e5c799](https://github.com/oscar60310/action-test/commit/3e5c799))
+* fix release template ([b057f28](https://github.com/oscar60310/action-test/commit/b057f28))
+
+
+
 ## <small>1.0.12 (2020-09-10)</small>
 
 * fix typo ([c575c63](https://github.com/oscar60310/action-test/commit/c575c63))
+* Release 1.0.12 ([cafa112](https://github.com/oscar60310/action-test/commit/cafa112))
 
 
 
