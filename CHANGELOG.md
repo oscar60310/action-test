@@ -1,6 +1,13 @@
+## <small>1.0.6 (2020-09-10)</small>
+
+* test multiple line output ([b798757](https://github.com/oscar60310/action-test/commit/b798757))
+
+
+
 ## <small>1.0.5 (2020-09-10)</small>
 
 * fix create release body ([7a5e77d](https://github.com/oscar60310/action-test/commit/7a5e77d))
+* Release 1.0.5 ([ea18aea](https://github.com/oscar60310/action-test/commit/ea18aea))
 
 
 
