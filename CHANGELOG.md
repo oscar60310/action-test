@@ -1,6 +1,13 @@
+## <small>1.0.12 (2020-09-10)</small>
+
+* fix typo ([c575c63](https://github.com/oscar60310/action-test/commit/c575c63))
+
+
+
 ## <small>1.0.11 (2020-09-10)</small>
 
 * add package log ([558c2a6](https://github.com/oscar60310/action-test/commit/558c2a6))
+* Release 1.0.11 ([a46df94](https://github.com/oscar60310/action-test/commit/a46df94))
 
 
 
