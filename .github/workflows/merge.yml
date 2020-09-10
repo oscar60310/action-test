@@ -10,6 +10,8 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
       - name: Set up Node.js
         uses: actions/setup-node@v1
         with:
@@ -19,7 +21,7 @@ jobs:
         id: check
         uses: EndBug/version-check@v1.5.0
         with:
-          diff-search: false
+          diff-search: true
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: Get yarn cache directory path
         id: yarn-cache-dir-path
