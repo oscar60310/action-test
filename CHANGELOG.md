@@ -1,6 +1,13 @@
+## <small>1.0.8 (2020-09-10)</small>
+
+* add missing import ([221b9c5](https://github.com/oscar60310/action-test/commit/221b9c5))
+
+
+
 ## <small>1.0.7 (2020-09-10)</small>
 
 * read change log from file ([218df76](https://github.com/oscar60310/action-test/commit/218df76))
+* Release 1.0.7 ([2721f0f](https://github.com/oscar60310/action-test/commit/2721f0f))
 
 
 
