@@ -1,5 +1,12 @@
+## <small>1.0.10 (2020-09-10)</small>
+
+* 1.0.10 qqaq ([4a5f474](https://github.com/oscar60310/action-test/commit/4a5f474))
+
+
+
 ## <small>1.0.9 (2020-09-10)</small>
 
+* Release 1.0.9 ([1088313](https://github.com/oscar60310/action-test/commit/1088313))
 * update read file for fs ([f11682a](https://github.com/oscar60310/action-test/commit/f11682a))
 
 
