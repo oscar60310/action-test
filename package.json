@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "echo \"Error: no test specified\" && exit 2",
     "changelog": "conventional-changelog -i CHANGELOG.md -s -r 0"
   },
   "author": "",
