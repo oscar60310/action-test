@@ -60,10 +60,13 @@ jobs:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           script: |
             const fs = require('fs');
-            const changelog = fs.readFileSync('release-note', 'utf-8')
+            const changelog = fs.readFileSync('release-note', 'utf-8');
+            const packages = JSON.parse(fs.readFileSync('test-pkgs.json', 'utf-8'));
+            const packageDescription = Object.keys(packages).map(name => `${name} = ${package[name]}`).join('\n');
+
             await github.repos.createRelease({
               owner: context.repo.owner,
               repo: context.repo.repo,
               tag_name: `v${process.env.version}`,
-              body: `${changelog}\nqaq`
+              body: `${changelog}\n\n###Packages:\n${packageDescription}`
             });
