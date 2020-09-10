@@ -1,6 +1,14 @@
+## <small>1.0.4 (2020-09-10)</small>
+
+* add auto release ([7cf1ee9](https://github.com/oscar60310/action-test/commit/7cf1ee9))
+* no version change ([abc63ad](https://github.com/oscar60310/action-test/commit/abc63ad))
+
+
+
 ## <small>1.0.3 (2020-09-10)</small>
 
 * 1.0.3 ([9e08fe4](https://github.com/oscar60310/action-test/commit/9e08fe4))
+* Release 1.0.3 ([65ebb3a](https://github.com/oscar60310/action-test/commit/65ebb3a))
 * update checkout depth ([96bf8c5](https://github.com/oscar60310/action-test/commit/96bf8c5))
 
 
