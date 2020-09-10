@@ -17,7 +17,7 @@ jobs:
         id: check
         uses: EndBug/version-check@v1.5.0
         with:
-          diff-search: false
+          diff-search: true
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: Labeling
         uses: actions/github-script@v3
