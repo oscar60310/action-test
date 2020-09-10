@@ -1,6 +1,13 @@
+## <small>1.0.9 (2020-09-10)</small>
+
+* update read file for fs ([f11682a](https://github.com/oscar60310/action-test/commit/f11682a))
+
+
+
 ## <small>1.0.8 (2020-09-10)</small>
 
 * add missing import ([221b9c5](https://github.com/oscar60310/action-test/commit/221b9c5))
+* Release 1.0.8 ([c9b08ff](https://github.com/oscar60310/action-test/commit/c9b08ff))
 
 
 
