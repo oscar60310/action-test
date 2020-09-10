@@ -1,5 +1,12 @@
+## <small>1.0.7 (2020-09-10)</small>
+
+* read change log from file ([218df76](https://github.com/oscar60310/action-test/commit/218df76))
+
+
+
 ## <small>1.0.6 (2020-09-10)</small>
 
+* Release 1.0.6 ([039e027](https://github.com/oscar60310/action-test/commit/039e027))
 * test multiple line output ([b798757](https://github.com/oscar60310/action-test/commit/b798757))
 
 
