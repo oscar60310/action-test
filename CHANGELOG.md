@@ -1,6 +1,13 @@
+## <small>1.0.11 (2020-09-10)</small>
+
+* add package log ([558c2a6](https://github.com/oscar60310/action-test/commit/558c2a6))
+
+
+
 ## <small>1.0.10 (2020-09-10)</small>
 
 * 1.0.10 qqaq ([4a5f474](https://github.com/oscar60310/action-test/commit/4a5f474))
+* Release 1.0.10 ([00b1336](https://github.com/oscar60310/action-test/commit/00b1336))
 
 
 
