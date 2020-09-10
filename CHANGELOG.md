@@ -1,6 +1,13 @@
+## <small>1.0.15 (2020-09-10)</small>
+
+* nothing change ([f44cff9](https://github.com/oscar60310/action-test/commit/f44cff9))
+
+
+
 ## <small>1.0.14 (2020-09-10)</small>
 
 * fix npm token ([8e7ea31](https://github.com/oscar60310/action-test/commit/8e7ea31))
+* Release 1.0.14 ([6bacb0b](https://github.com/oscar60310/action-test/commit/6bacb0b))
 
 
 
