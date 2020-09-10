@@ -1,7 +1,14 @@
+## <small>1.0.5 (2020-09-10)</small>
+
+* fix create release body ([7a5e77d](https://github.com/oscar60310/action-test/commit/7a5e77d))
+
+
+
 ## <small>1.0.4 (2020-09-10)</small>
 
 * add auto release ([7cf1ee9](https://github.com/oscar60310/action-test/commit/7cf1ee9))
 * no version change ([abc63ad](https://github.com/oscar60310/action-test/commit/abc63ad))
+* Release 1.0.4 ([6a51623](https://github.com/oscar60310/action-test/commit/6a51623))
 
 
 
