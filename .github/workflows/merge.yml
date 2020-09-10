@@ -41,8 +41,7 @@ jobs:
         run: yarn changelog
       - name: generate-changelog-msg
         if: steps.check.outputs.changed == 'true'
-        id: changelog
-        run: echo "::set-output name=message::'$(yarn run -s conventional-changelog)'"
+        run: echo $(yarn run -s conventional-changelog) > release-note
       - name: commit-changelog
         if: steps.check.outputs.changed == 'true'
         uses: EndBug/add-and-commit@v4
@@ -57,13 +56,13 @@ jobs:
         uses: actions/github-script@v3
         env:
           version: ${{ steps.check.outputs.version }}
-          message: ${{ steps.changelog.outputs.message }}
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           script: |
+            const changelog = fs.readFileSync('release-note')
             await github.repos.createRelease({
               owner: context.repo.owner,
               repo: context.repo.repo,
               tag_name: `v${process.env.version}`,
-              body: `${process.env.message}\nqaq`
+              body: `${changelog}\nqaq`
             });
