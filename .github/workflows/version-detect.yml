@@ -23,7 +23,7 @@ jobs:
         id: dev
         run: |
           VERSION=$(cat package.json | jq '.version')
-          if [[ ${VERSION: -5}  == -dev* ]]; then;
+          if [[ ${VERSION: -5}  == -dev* ]]; then
             echo "::set-output isdev=true"
           else
             echo "::set-output isdev=false"
