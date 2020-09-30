@@ -29,7 +29,8 @@ jobs:
             echo "::set-output isdev=false"
           fi
       - name: Test
-        run: echo ${{ steps.dev.isdev }}
+        if: steps.check.outputs.changed == 'true' && steps.dev.outputs.isdev == 'true'
+        run: echo yo
       - name: Labeling
         uses: actions/github-script@v3
         env:
