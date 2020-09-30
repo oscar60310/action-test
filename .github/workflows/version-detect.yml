@@ -24,9 +24,9 @@ jobs:
         run: |
           VERSION=$(cat package.json | jq '.version')
           if [[ ${VERSION: -5}  == -dev* ]]; then
-            echo "::set-output isdev=true"
+            echo "::set-output name=isdev::true"
           else
-            echo "::set-output isdev=false"
+            echo "::set-output name=isdev::false"
           fi
       - name: Test
         env:
