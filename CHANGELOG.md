@@ -1,7 +1,16 @@
+## 1.2.0 (2020-09-30)
+
+* bump to 1.2.0 ([7031754](https://github.com/oscar60310/action-test/commit/7031754))
+* log context ([a02e945](https://github.com/oscar60310/action-test/commit/a02e945))
+* pr test ([f7384dc](https://github.com/oscar60310/action-test/commit/f7384dc))
+
+
+
 ## 1.1.0 (2020-09-10)
 
 * bump to 1.1.0 ([2b7fa34](https://github.com/oscar60310/action-test/commit/2b7fa34))
 * change xxxx ([1545017](https://github.com/oscar60310/action-test/commit/1545017))
+* Release 1.1.0 ([514e26a](https://github.com/oscar60310/action-test/commit/514e26a))
 
 
 
