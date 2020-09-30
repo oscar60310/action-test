@@ -29,7 +29,9 @@ jobs:
             echo "::set-output isdev=false"
           fi
       - name: Test
-        run: echo yo; echo ${{ steps.dev.outputs.isdev }}
+        env:
+          dev: ${{ steps.dev.outputs.isdev }}
+        run: echo yo; echo $dev
       - name: Labeling
         uses: actions/github-script@v3
         env:
