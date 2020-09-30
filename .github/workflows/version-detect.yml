@@ -19,6 +19,18 @@ jobs:
         with:
           diff-search: true
           token: ${{ secrets.GITHUB_TOKEN }}
+      - name: Dev check
+        id: dev
+        run: |
+          VERSION=$(cat package.json | jq '.version')
+          if [[ ${VERSION: -5}  == -dev* ]]; then
+            echo "::set-output name=isdev::true"
+          else
+            echo "::set-output name=isdev::false"
+          fi
+      - name: Test
+        if: steps.check.outputs.changed == 'true' && steps.dev.outputs.isdev == 'true'
+        run: echo yo;
       - name: Labeling
         uses: actions/github-script@v3
         env:
