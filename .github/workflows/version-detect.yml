@@ -24,12 +24,11 @@ jobs:
         run: |
           VERSION=$(cat package.json | jq '.version')
           if [[ ${VERSION: -5}  == -dev* ]]; then
-            echo "::set-output isdev='true'"
+            echo "::set-output isdev=true"
           else
-            echo "::set-output isdev='false'"
+            echo "::set-output isdev=false"
           fi
       - name: Test
-        if: steps.dev.outputs.isdev == 'true'
         run: echo yo; echo ${{ steps.dev.outputs.isdev }}
       - name: Labeling
         uses: actions/github-script@v3
