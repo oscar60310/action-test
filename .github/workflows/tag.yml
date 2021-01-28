@@ -18,4 +18,6 @@ jobs:
           custom_tag: "test"
           tag_prefix: ""
       - name: check
-        run: git tag
+        run: |
+          git pull
+          git tag
