@@ -11,13 +11,13 @@ jobs:
       - name: Check out Git repository
         uses: actions/checkout@v2
       - name: add tag
-        uses: mathieudutour/github-tag-action@v5.1
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          default_bump: "false"
-          custom_tag: "test"
-          tag_prefix: ""
+        env:
+          TAG_NAME: test
+        run: |
+          git config user.name github-actions
+          git config user.email github-actions@github.com
+          git tag $TAG_NAME
+          git push $(git remote) $TAG_NAME
       - name: check
         run: |
-          git pull
           git tag
