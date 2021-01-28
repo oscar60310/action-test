@@ -1,0 +1,19 @@
+name: "Version detection"
+on:
+  push:
+    branches:
+      - tag-test
+
+jobs:
+  tag:
+    runs-on: ubuntu-latest
+    steps:
+      - name: add tag
+        uses: mathieudutour/github-tag-action@v5.1
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          default_bump: "false"
+          custom_tag: "test"
+          tag_prefix: ""
+      - name: check
+        run: git tag
